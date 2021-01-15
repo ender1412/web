@@ -1,0 +1,68 @@
+body{
+	display: flex;
+	margin : 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(bg.jpg);/*1920*1080�� ���� ����*/
+}
+body::before{
+	content:"";
+	position: absolute; z-index:1;
+	top:0;right:0;bottom:0;left:0;
+	background-color: rgba(0,0,0,.7);
+}
+.report{
+	position: relative; z-index:2;
+	display: block;
+	width: 400px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: #191919;
+	text-align: center;
+}
+.report h1{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.report p{
+	background: none;
+	display: block;
+	text-align:left;
+	color: white;
+}
+.report input[type= "text"]{
+	background: none;
+	display: block;
+	text-align: center;
+	width: 350px;
+	margin: 15px 20px;
+	border: 2px solid #2ecc71;
+	outline: none;
+	color: white;
+	border-radius: 24px;
+}
+.report button[name="compeletebtn"]{
+	background: none;
+	display: block
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid #3498db; /*�׵θ�*/
+	padding: 14px 40px; /*margin�� �ݴ��� ä���� �ǹ���*/
+	outline: none;/*border���� �ٱ��� ������ ����Ŵ*/
+	color: white;
+	border-radius: 24px;
+	transition: 0.25s;/*���콺�ø��� ������ �������ٲ��� �ð� 0.25��*/
+	cursor: pointer;
+}
+.report button[name = "compeletebtn"]:hover{/*hover�� focus�� ���������� Ŀ���� �÷������� �ߵ��Ѵ�*/
+	background: #3498db;
+	transition: 0.25s;
+}
+.report input[type = "text"]:focus{
+	border: 2px solid #3498db;
+	transition: 0.25s;
+}
